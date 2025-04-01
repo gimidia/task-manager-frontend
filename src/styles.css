@@ -1,0 +1,241 @@
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+/* Estiliza os títulos */
+h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    text-align: left;
+    color: #495057;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Campos de entrada */
+input, select {
+    padding: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    color: #495057;
+    width: 100%;
+    transition: border-color 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Botão principal */
+button {
+    padding: 14px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    color: white;
+    background-color: #007bff;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Lista de Tarefas */
+.task-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Cada tarefa */
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Container para o texto da tarefa (título e status) */
+.task-info-container {
+    flex-grow: 1;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+/* Título da tarefa (em negrito) */
+.task-item strong {
+    font-size: 16px;
+    color: #343a40;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+}
+
+/* Status da tarefa */
+.task-item span { /* Estilizando o status que não tem classe específica */
+    font-size: 14px;
+    color: #6c757d;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Botões de ação da tarefa */
+.task-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center; /* Centralizar verticalmente os botões */
+}
+
+.task-actions button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.task-actions button:hover {
+    opacity: 0.9;
+}
+
+.task-actions button:active {
+    transform: scale(0.95);
+}
+
+/* Botão Editar (cor específica) */
+.task-actions button:first-child { /* Seleciona o primeiro botão dentro de task-actions */
+    background-color: #28a745;
+}
+
+.task-actions button:first-child:hover {
+    background-color: #218838;
+}
+
+/* Botão Excluir (cor específica) */
+.task-actions button:last-child { /* Seleciona o último botão dentro de task-actions */
+    background-color: #dc3545;
+}
+
+.task-actions button:last-child:hover {
+    background-color: #c82333;
+}
+
+/* Seletor de filtro (Todas) */
+.task-list > div:first-child select {
+    margin-bottom: 15px;
+}
+
+/* Estilos para as datas na TaskItem */
+.task-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 3px;
+}
+
+/* Estilos para o formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Estilos para os campos do formulário (input, select) */
+form input[type="text"],
+form input[type="date"],
+form select {
+    padding: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    color: #495057;
+    width: 100%;
+    transition: border-color 0.2s ease-in-out;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilos para o label */
+form label {
+    font-size: 1rem;
+    color: #495057;
+    margin-bottom: 5px;
+    display: block; /* Garante que o label ocupe a linha inteira */
+}
+
+/* Estilos para o grupo do campo de data */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Alinha o label e o input verticalmente */
+    gap: 5px; /* Espaçamento entre o label e o input dentro do grupo */
+}
