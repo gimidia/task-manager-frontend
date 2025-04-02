@@ -5,6 +5,9 @@ React
 
 Vite
 
+## Screenshot
+![Tela do sistema](public/demo.gif)
+
 ## Clone o repositório
 git clone https://github.com/gimidia/task-manager-frontend
 
